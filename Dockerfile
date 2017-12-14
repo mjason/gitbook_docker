@@ -6,8 +6,10 @@ RUN apt-get update && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
+RUN echo 'registry=https://registry.npm.taobao.org' > /root/.npmrc && \
+    echo 'registry=https://registry.npm.taobao.org' > /home/node/.npmrc
+
 RUN npm install --global gitbook-cli
-RUN npm install --global gitbook-plugin-anchor-navigation-ex
 
 WORKDIR /tmp
 
