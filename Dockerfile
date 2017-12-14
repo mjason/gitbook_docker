@@ -15,3 +15,5 @@ RUN gitbook init
 RUN mkdir -p /opt/gitbook
 
 WORKDIR /opt/gitbook
+
+RUN gitbook install ./
