@@ -7,6 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN npm install --global gitbook-cli
+RUN npm install --global gitbook-plugin-anchor-navigation-ex
 
 WORKDIR /tmp
 
@@ -15,5 +16,3 @@ RUN gitbook init
 RUN mkdir -p /opt/gitbook
 
 WORKDIR /opt/gitbook
-
-RUN gitbook install ./
